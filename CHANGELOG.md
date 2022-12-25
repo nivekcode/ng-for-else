@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/kreuzerk/ng-for-else/compare/v1.0.0...v1.0.1) (2022-12-25)
+
+### Bug Fixes
+
+- 🐛 release README ([acf7975](https://github.com/kreuzerk/ng-for-else/commit/acf7975c9109eacd9c93bae143089469a1a7c7fb))
+
 # 1.0.0 (2022-12-25)
 
 ### Features
