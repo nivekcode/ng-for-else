@@ -7,6 +7,7 @@
 
 - [Getting started](#getting-started)
 - [Usage](#usage)
+- [Demo](#demo)
 - [Contributors ✨](#contributors-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
