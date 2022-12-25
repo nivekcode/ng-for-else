@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularLibraryStarter": {
+    "ngForElse": {
       "projectType": "library",
-      "root": "projects/angular-library-starter",
-      "sourceRoot": "projects/angular-library-starter/src",
+      "root": "projects/ng-for-else",
+      "sourceRoot": "projects/ng-for-else/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/angular-library-starter/ng-package.json"
+            "project": "projects/ng-for-else/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/angular-library-starter/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-for-else/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/angular-library-starter/tsconfig.lib.json"
+              "tsConfig": "projects/ng-for-else/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,38 +27,36 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "tsConfig": "projects/angular-library-starter/tsconfig.spec.json"
+            "tsConfig": "projects/ng-for-else/tsconfig.spec.json"
           }
         }
       }
     },
-    "angularLibraryStarterShowcase": {
+    "ngForElseShowcase": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/angular-library-starter-showcase",
-      "sourceRoot": "projects/angular-library-starter-showcase/src",
+      "root": "projects/ng-for-else-showcase",
+      "sourceRoot": "projects/ng-for-else-showcase/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-library-starter-showcase",
-            "index": "projects/angular-library-starter-showcase/src/index.html",
-            "main": "projects/angular-library-starter-showcase/src/main.ts",
-            "polyfills": "projects/angular-library-starter-showcase/src/polyfills.ts",
-            "tsConfig": "projects/angular-library-starter-showcase/tsconfig.app.json",
+            "outputPath": "dist/ng-for-else-showcase",
+            "index": "projects/ng-for-else-showcase/src/index.html",
+            "main": "projects/ng-for-else-showcase/src/main.ts",
+            "polyfills": "projects/ng-for-else-showcase/src/polyfills.ts",
+            "tsConfig": "projects/ng-for-else-showcase/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/angular-library-starter-showcase/src/favicon.ico",
-              "projects/angular-library-starter-showcase/src/assets"
+              "projects/ng-for-else-showcase/src/favicon.ico",
+              "projects/ng-for-else-showcase/src/assets"
             ],
-            "styles": [
-              "projects/angular-library-starter-showcase/src/styles.scss"
-            ],
+            "styles": ["projects/ng-for-else-showcase/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -77,8 +75,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/angular-library-starter-showcase/src/environments/environment.ts",
-                  "with": "projects/angular-library-starter-showcase/src/environments/environment.prod.ts"
+                  "replace": "projects/ng-for-else-showcase/src/environments/environment.ts",
+                  "with": "projects/ng-for-else-showcase/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -98,10 +96,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angularLibraryStarterShowcase:build:production"
+              "browserTarget": "ngForElseShowcase:build:production"
             },
             "development": {
-              "browserTarget": "angularLibraryStarterShowcase:build:development"
+              "browserTarget": "ngForElseShowcase:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,20 +107,18 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularLibraryStarterShowcase:build"
+            "browserTarget": "ngForElseShowcase:build"
           }
         },
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "tsConfig": "projects/angular-library-starter-showcase/tsconfig.spec.json",
+            "tsConfig": "projects/ng-for-else-showcase/tsconfig.spec.json",
             "assets": [
-              "projects/angular-library-starter-showcase/src/favicon.ico",
-              "projects/angular-library-starter-showcase/src/assets"
+              "projects/ng-for-else-showcase/src/favicon.ico",
+              "projects/ng-for-else-showcase/src/assets"
             ],
-            "styles": [
-              "projects/angular-library-starter-showcase/src/styles.scss"
-            ],
+            "styles": ["projects/ng-for-else-showcase/src/styles.scss"],
             "scripts": []
           }
         }

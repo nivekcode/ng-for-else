@@ -12,7 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "angularLibraryStarter": ["dist/angular-library-starter"]
+      "ngForElse": ["dist/ng-for-else"]
     },
     "declaration": false,
     "downlevelIteration": true,

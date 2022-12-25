@@ -2,17 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 
-import { AngularLibraryStarterSampleComponent } from '../../../angular-library-starter/src/lib/sample.component';
+import { NgForElseSampleComponent } from '../../../ng-for-else/src/lib/sample.component';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    HighlightModule,
-    AngularLibraryStarterSampleComponent,
-  ],
+  imports: [BrowserModule, HighlightModule, NgForElseSampleComponent],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,

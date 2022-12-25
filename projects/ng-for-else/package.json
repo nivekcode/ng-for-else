@@ -1,5 +1,5 @@
 {
-  "name": "angular-library-starter",
+  "name": "ng-for-else",
   "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^15.0.4",
