@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { delay, of } from 'rxjs';
+import { HighlightModule } from 'ngx-highlightjs';
+import { NgForOf } from '@angular/common';
+import { NgForElse } from '../../../../ng-for-else/src/lib/ng-for-else.directive';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'array-example',
+  templateUrl: './array-example.component.html',
+  standalone: true,
+  imports: [HighlightModule, NgForOf, NgForElse],
 })
-export class AppComponent {
+export class ArrayExmpleComponent {
   private AVAILABLE_DWARF_CLASSES = ['Driller', 'Engineer', 'Gunner', 'Scout'];
   dwarfClasses = [...this.AVAILABLE_DWARF_CLASSES];
-  dwarfClasses$ = of(this.dwarfClasses).pipe(delay(5000));
-
   arrayUsageDemoCode = `
 <ng-template #emptyListTemplate>
   <div

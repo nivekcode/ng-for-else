@@ -1,0 +1,40 @@
+<h1 class="text-3xl py-5">Array usage</h1>
+<h2 class="text-xl py-5">Deep rock galactic dwarf classes</h2>
+
+<ng-template #emptyListTemplate>
+  <div
+    class="bg-red-400 rounded-lg shadow-lg p-5 mt-3 border border-red-500 text-white"
+  >
+    Empty list
+  </div>
+</ng-template>
+
+<div
+  class="bg-white rounded-lg shadow-lg p-5 mt-3 border border-slate-100"
+  *ngFor="let dwarfClass of dwarfClasses; else: emptyListTemplate"
+>
+  {{ dwarfClass }}
+</div>
+
+<button
+  (click)="reduceDwarfClasses()"
+  class="bg-blue-700 text-white rounded-3xl p-3 px-5 mr-2 mt-5"
+>
+  Show only two dwarf classes
+</button>
+<button
+  (click)="cleanup()"
+  class="bg-blue-700 text-white rounded-3xl p-3 px-5 mr-2 mt-5"
+>
+  Clean up dwarf classes
+</button>
+<button
+  (click)="reset()"
+  class="bg-blue-700 text-white rounded-3xl p-3 px-5 mr-2 mt-5"
+>
+  Reset
+</button>
+
+<pre
+  class="p-5 rounded-xl border border-slate-500 my-5"
+><code [highlight]="arrayUsageDemoCode"></code></pre>

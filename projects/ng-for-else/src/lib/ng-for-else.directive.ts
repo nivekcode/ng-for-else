@@ -1,9 +1,11 @@
 import {
+  AfterViewInit,
   Directive,
   DoCheck,
   EmbeddedViewRef,
   Host,
   Input,
+  OnInit,
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
@@ -13,7 +15,7 @@ import { NgForOf } from '@angular/common';
   selector: '[ngForElse]',
   standalone: true,
 })
-export class NgForElseDirective implements DoCheck {
+export class NgForElse implements DoCheck {
   @Input('ngForElse') elseTemplate!: TemplateRef<any>;
   private viewRef: EmbeddedViewRef<any> | undefined | null;
 
@@ -23,8 +25,11 @@ export class NgForElseDirective implements DoCheck {
   ) {}
 
   ngDoCheck(): void {
-    const itemsLength = (this.ngFor as any)._ngForOf.length;
+    const itemsLength = (this.ngFor as any)?._ngForOf?.length;
     if (!itemsLength) {
+      if (this.viewRef) {
+        return;
+      }
       this.viewRef = this.viewContainerRef.createEmbeddedView(
         this.elseTemplate
       );

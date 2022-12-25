@@ -6,39 +6,11 @@
 </nav>
 
 <div class="container mx-auto p-10">
-  <h1 class="text-3xl py-5">Deep rock galactic dwarf classes</h1>
+  <p>
+    ng-if-else allows you to display a template if the expression passed to
+    ngFor returns null or an empty array
+  </p>
 
-  <ng-template #emptyListTemplate>
-    <div
-      class="bg-red-400 rounded-lg shadow-lg p-5 mt-3 border border-red-500 text-white"
-    >
-      Empty list
-    </div>
-  </ng-template>
-
-  <div
-    class="bg-white rounded-lg shadow-lg p-5 mt-3 border border-slate-100"
-    *ngFor="let dwarfClass of dwarfClasses; else: emptyListTemplate"
-  >
-    {{ dwarfClass }}
-  </div>
-
-  <button
-    (click)="reduceDwarfClasses()"
-    class="bg-blue-700 text-white rounded-3xl p-3 px-5 mr-2 mt-5"
-  >
-    Show only two dwarf classes
-  </button>
-  <button
-    (click)="cleanup()"
-    class="bg-blue-700 text-white rounded-3xl p-3 px-5 mr-2 mt-5"
-  >
-    Clean up dwarf classes
-  </button>
-  <button
-    (click)="reset()"
-    class="bg-blue-700 text-white rounded-3xl p-3 px-5 mr-2 mt-5"
-  >
-    Reset
-  </button>
+  <array-example></array-example>
+  <observable-example></observable-example>
 </div>
