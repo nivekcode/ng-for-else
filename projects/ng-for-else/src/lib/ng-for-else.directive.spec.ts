@@ -1,7 +1,7 @@
-import { NgForElseDirective } from './ng-for-else.directive';
+import { NgForElse } from './ng-for-else.directive';
 
 describe('NgForElse', () => {
-  let sut: NgForElseDirective;
+  let sut: NgForElse;
 
   const ngForMock = {
     _ngForOf: [],
@@ -13,13 +13,13 @@ describe('NgForElse', () => {
   } as any;
 
   beforeEach(() => {
-    sut = new NgForElseDirective(ngForMock, viewContainerMock);
+    sut = new NgForElse(ngForMock, viewContainerMock);
   });
 
   afterEach(() => jest.resetAllMocks());
 
   it('should create an embedded view with our template when ngFor does not render items', () => {
-    const elseMock = 'Rock and stone broter!';
+    const elseMock = 'Rock and stone brother!';
     jest.spyOn(viewContainerMock, 'createEmbeddedView');
     ngForMock._ngForOf = [];
     sut.elseTemplate = elseMock as any;
@@ -30,7 +30,7 @@ describe('NgForElse', () => {
 
   it('should remove the elseTemplate if ngFor renders items', () => {
     const mockedIndex = 0;
-    const mockedViewRef = 'Rock and stone broter!';
+    const mockedViewRef = 'Rock and stone brother!';
     jest.spyOn(viewContainerMock, 'indexOf').mockReturnValue(mockedIndex);
     jest
       .spyOn(viewContainerMock, 'createEmbeddedView')
@@ -48,7 +48,7 @@ describe('NgForElse', () => {
 
   it('should store the ViewRef and reset it after removing the elseTemplate', () => {
     const mockedIndex = 0;
-    const mockedViewRef = 'Rock and stone broter!';
+    const mockedViewRef = 'Rock and stone brother!';
     jest.spyOn(viewContainerMock, 'indexOf').mockReturnValue(mockedIndex);
     jest
       .spyOn(viewContainerMock, 'createEmbeddedView')
