@@ -1,11 +1,9 @@
 import {
-  AfterViewInit,
   Directive,
   DoCheck,
   EmbeddedViewRef,
   Host,
   Input,
-  OnInit,
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
