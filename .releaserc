@@ -1,5 +1,5 @@
 {
-  "pkgRoot": "dist/ng-if-responsive",
+  "pkgRoot": "dist/ng-for-else",
   "branches": ["main"],
   "plugins": [
     "@semantic-release/commit-analyzer",

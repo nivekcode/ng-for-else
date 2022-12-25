@@ -5,17 +5,13 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
-
-- [ng-for-else](#ng-for-else)
-  - [Getting started](#getting-started)
-  - [Usage](#usage)
-  - [Demo](#demo)
-  - [Contributors ✨](#contributors-)
+- [Getting started](#getting-started)
+- [Usage](#usage)
+- [Contributors ✨](#contributors-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-This module extends `ngFor` capabilities and allows you to display a template while the expression passed to `ngFor` is empty or null. By installing this module you can still use the native `ngFor` just with extended features.
+This module extends `ngFor` capabilities and allows you to display a template while the expression passed to `ngFor` is empty or `null`. By installing this module you can still use the native `ngFor` just with extended features.
 
 ## Getting started
 
@@ -38,7 +34,7 @@ Use `ngFor` the way you normally do. For example to display a list.
 </div>
 ```
 
-To use this directive you have to create a template with a templateReference which you want to display while the expression passed to `ngFor` is `null` or `empty`.
+To use this directive you have to create a template with a templateReference which you want to display while the expression passed to `ngFor` is `null` or empty.
 
 ```html
 <ng-template #emptyListTemplate>
@@ -60,10 +56,6 @@ Once you have this you can use `else` in the `ngFor` expression to display your 
   {{ dwarfClass }}
 </div>
 ```
-
-## Demo
-
-Feel free to checkout and play with `ng-if-else` on our running demo application.
 
 ## Contributors ✨
 
