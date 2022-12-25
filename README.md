@@ -57,6 +57,10 @@ Once you have this you can use `else` in the `ngFor` expression to display your 
 </div>
 ```
 
+## Demo
+
+Feel free to checkout and play with `ng-if-else` on our running [demo application](https://kreuzerk.github.io/ng-for-else/).
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
